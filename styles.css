@@ -19,9 +19,13 @@ header {
 }
 
 .logo img {
-    width: 100px;
+    width: auto; /* Automatyczna szerokość */
+    height: auto; /* Automatyczna wysokość */
+    max-width: 250px; /* Maksymalna szerokość logo */
+    max-height: 200px; /* Maksymalna wysokość logo */
     display: block;
-    margin: 0 auto 10px;
+    margin: 0 auto 10px; /* Wyśrodkowanie logo */
+    object-fit: contain; /* Zachowanie proporcji obrazu */
 }
 
 nav {
@@ -177,10 +181,19 @@ form {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 50px; /* Dodanie marginesu, aby formularz był oddzielony od stopki */
+    transition: background-color 0.3s ease;
 }
 
-form input, form textarea {
+/* Zmiana tła formularza w trybie ciemnym */
+body.dark-mode form {
+    background-color: #333; /* Tło formularza w trybie ciemnym */
+    color: #fff;
+}
+
+/* Zmiana tła i koloru tekstu w polu tekstowym */
+textarea, input[type="text"], input[type="email"] {
+    resize: none;
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -188,8 +201,19 @@ form input, form textarea {
     border-radius: 5px;
     font-size: 1rem;
     box-sizing: border-box;
+    background-color: #f1f1f1; /* Tło pól formularza w trybie jasnym */
+    color: #2B2D42; /* Kolor tekstu w trybie jasnym */
 }
 
+/* Zmiana tła i koloru tekstu w polach formularza w trybie ciemnym */
+body.dark-mode textarea,
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"] {
+    background-color: #121212; /* Tło pól formularza w trybie ciemnym */
+    color: white; /* Kolor tekstu w trybie ciemnym */
+}
+
+/* Stylizacja przycisku formularza */
 form button {
     background-color: #E4A200;
     color: white;

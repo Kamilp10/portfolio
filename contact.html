@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="contact.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script defer src="script.js"></script> <!-- Wstawienie wspólnego pliku JS -->
 </head>
-<body class="dark-mode">
+<body>
     <header>
         <div class="logo">
             <img src="logo.png" alt="Logo" />
@@ -26,15 +26,18 @@
     </nav>
     <section id="contact">
         <h2>Formularz kontaktowy</h2>
-        <form id="contact-form">
-            <input type="text" name="name" placeholder="Twoje imię" required>
-            <input type="email" name="email" placeholder="Twój email" required>
-            <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
-            <button type="submit">Wyślij</button>
-        </form>
+        <div class="form-container">
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Twoje imię" required>
+                <input type="email" name="email" placeholder="Twój email" required>
+                <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
+                <button type="submit">Wyślij</button>
+            </form>
+        </div>
     </section>
+    
     <footer>
-        <p>&copy; 2025 Moje Portfolio</p>
+        <p>&copy; 2025 Kamil Pietrzak</p>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/kamilpi/" class="linkedin-link" target="_blank">
                 <img src="linkedin.png" alt="LinkedIn" class="linkedin-icon">
