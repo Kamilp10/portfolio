@@ -20,11 +20,10 @@ header {
 
 .logo img {
     width: 300px;
-    height: 250px;
+    height: auto;
     display: block;
     margin: 0 auto 10px;
     max-width: 100%;
-    height: auto;
 }
 
 nav {
@@ -84,7 +83,7 @@ button#theme-toggle {
     cursor: pointer;
 }
 
-/* Stylizacja przycisku LinkedIn w stopce */
+/* Stylizacja stopki */
 footer {
     background: #222;
     color: white;
@@ -120,7 +119,7 @@ footer .linkedin-link:hover .linkedin-icon {
     opacity: 0.8;
 }
 
-/* Reaktywność: przyciski LinkedIn w stopce */
+/* Responsywność */
 @media screen and (max-width: 600px) {
     footer .social-links {
         flex-direction: row;
@@ -140,11 +139,16 @@ footer .linkedin-link:hover .linkedin-icon {
     }
 }
 
-/* Wyśrodkowanie całej treści */
+/* Wyśrodkowanie głównej treści */
 main {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+}
+
+/* Odstęp od stopki */
+section {
+    margin-bottom: 50px;
 }
 
 /* Tryb ciemny */
@@ -169,7 +173,12 @@ main {
     color: #FF8C42;
 }
 
-/* Stylizacja formularza kontaktowego */
+/* Formularz kontaktowy */
+#contact h2 {
+    text-align: center; /* Wyśrodkowanie tytułu formularza */
+    margin-bottom: 20px;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -234,4 +243,15 @@ form button:hover {
     form input, form textarea {
         font-size: 0.9rem;
     }
+}
+
+/* Usunięcie kropek w sekcji projektów */
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#projects li {
+    margin-bottom: 10px;
 }
