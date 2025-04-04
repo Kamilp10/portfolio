@@ -1,0 +1,205 @@
+/* Podstawowe style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #E3EAF2; /* Jasny niebieskoszary */
+    color: #2B2D42; /* Grafitowy */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Zapewni, że stopka będzie na dole */
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    background: #3A506B; /* Granatowy */
+    color: white;
+    padding: 1em;
+}
+
+.logo img {
+    width: 100px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+nav {
+    background: #E4A200; /* Złoty */
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie nawigacji */
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Animacja podkreślenia */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+nav ul li a:hover {
+    color: #2B2D42;
+}
+
+button#theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Stylizacja przycisku LinkedIn w stopce */
+footer {
+    background: #222;
+    color: white;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto; /* Sprawia, że stopka jest na dole */
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .linkedin-link {
+    display: inline-block;
+    margin: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .linkedin-link:hover {
+    transform: scale(1.1);
+}
+
+footer .linkedin-icon {
+    width: 30px; /* Zmniejszenie logo */
+    height: 30px; /* Zmniejszenie logo */
+    object-fit: contain;
+    transition: opacity 0.3s ease-in-out;
+}
+
+footer .linkedin-link:hover .linkedin-icon {
+    opacity: 0.8;
+}
+
+/* Reaktywność: przyciski LinkedIn w stopce */
+@media screen and (max-width: 600px) {
+    footer .social-links {
+        flex-direction: row;
+    }
+
+    footer .linkedin-link {
+        margin: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Zmiana na pionowe rozmieszczenie przycisków */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Większy odstęp między przyciskami */
+    }
+}
+
+/* Wyśrodkowanie całej treści */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tryb ciemny */
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode header {
+    background: #FF8C42;
+}
+
+.dark-mode nav {
+    background: #D87324;
+}
+
+.dark-mode nav ul li a {
+    color: white;
+}
+
+.dark-mode nav ul li a:hover {
+    color: #FF8C42;
+}
+
+/* Stylizacja formularza kontaktowego */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #E4A200;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+form button:hover {
+    background-color: #D87324;
+}
